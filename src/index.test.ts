@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { add } from '../src/index.js';
+import { add } from './index.js';
 
 describe('add function', () => {
   it('should return the sum of two positive numbers', () => {
