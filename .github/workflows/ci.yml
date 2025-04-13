@@ -1,0 +1,45 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x, 22.x] # Test against multiple Node.js versions
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 9 # Use the latest pnpm version
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'pnpm' # Enable caching for pnpm
+
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile # Use frozen lockfile for reproducibility
+
+    - name: Run lint checks
+      run: pnpm lint # Check for linting errors
+
+    - name: Run format checks
+      run: pnpm format:check # Check for formatting issues
+
+    - name: Build project
+      run: pnpm build # Compile TypeScript to JavaScript
+
+    - name: Run tests
+      run: pnpm test # Execute unit tests
