@@ -1,5 +1,4 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { server } from '../src/mcp-server.js';
 
 describe('MCP Server', () => {
   beforeEach(() => {
