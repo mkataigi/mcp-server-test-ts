@@ -9,7 +9,18 @@
     "forceConsistentCasingInFileNames": true, // Ensure consistent file casing
     "strict": true, // Enable all strict type-checking options
     "skipLibCheck": true, // Skip type checking of declaration files
-    "resolveJsonModule": true // Allow importing JSON files
+    "resolveJsonModule": true, // Allow importing JSON files
+    "sourceMap": true, // Generate source maps for debugging in production
+    "declaration": true, // Generate declaration files
+    "removeComments": true, // Remove comments in output files
+    "noImplicitAny": true, // Raise error on expressions with implicit 'any' type
+    "experimentalDecorators": true, // Enable experimental support for decorators
+    "emitDecoratorMetadata": true, // Emit decorator metadata
+    "noUnusedLocals": true, // Report errors on unused locals
+    "noUnusedParameters": true, // Report errors on unused parameters
+    "types": ["node"], // 明示的にNode.jsの型定義を追加
+    "allowSyntheticDefaultImports": true, // デフォルトインポートを許可
+    "preserveSymlinks": true // シンボリックリンクを保持
   },
   "include": ["src/**/*", "test/**/*"], // Include all files in src and test directories
   "exclude": ["node_modules", "dist"] // Exclude node_modules and the output directory
