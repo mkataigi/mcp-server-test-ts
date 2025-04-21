@@ -1,5 +1,5 @@
 {
-  "name": "mcp-test",
+  "name": "mcp-server-test-ts",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,8 +20,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@modelcontextprotocol/sdk": "^1.9.0",
-    "@types/node": "^22.14.1",
     "@typescript-eslint/eslint-plugin": "^8.29.1",
     "@typescript-eslint/parser": "^8.29.1",
     "eslint": "^9.24.0",
@@ -35,6 +33,7 @@
   },
   "packageManager": "pnpm@9.14.1",
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
     "zod": "^3.24.2"
   }
 }
