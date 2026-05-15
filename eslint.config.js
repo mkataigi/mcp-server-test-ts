@@ -22,7 +22,8 @@ export default tseslint.config(
       'dist/',
       'node_modules/',
       'eslint.config.js', // Ignore this config file itself
-      'vite.config.ts', // Assuming vitest might add this later
+      'vite.config.ts',
+      'vitest.config.ts',
       'pnpm-lock.yaml',
       '.prettierrc.json', // Ignore prettier config
       '.prettierignore', // Ignore prettier ignore file
